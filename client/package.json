@@ -7,6 +7,7 @@
     "analyze": "cross-env NODE_ENV=development webpack --analyze",
     "prebuild": "rimraf ../dist",
     "build": "cross-env NODE_ENV=development webpack",
+    "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
     "develop": "cross-env NODE_ENV=development webpack serve"
   },
   "dependencies": {
@@ -46,6 +47,7 @@
     "babel-loader": "8.2.3",
     "cross-env": "7.0.3",
     "css-loader": "6.5.1",
+    "cssnano": "^5.0.12",
     "html-webpack-plugin": "5.5.0",
     "mini-css-extract-plugin": "2.4.5",
     "postcss": "8.3.11",
@@ -59,9 +61,7 @@
     "webpack-cli": "4.9.1",
     "webpack-dev-server": "4.5.0"
   },
-  "engines": {
-    "node": "16.x.x"
-  },
+  "engines": {},
   "typesync": {
     "ignoreDeps": [
       "dev"

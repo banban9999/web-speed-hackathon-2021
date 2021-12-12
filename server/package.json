@@ -6,8 +6,9 @@
   "main": "src/index.js",
   "scripts": {
     "build": "echo noop",
+    "build:prod": "echo noop",
     "prestart": "npm-run-all prestart:clean prestart:init",
-    "start": "babel-node --experimental-wasm-threads src/index.js",
+    "start": "babel-node --prof --experimental-wasm-threads src/index.js",
     "prestart:clean": "rimraf ../upload",
     "prestart:init": "mkdirp ../upload/images ../upload/movies ../upload/sounds"
   },
@@ -50,7 +51,6 @@
     "@types/uuid": "8.3.3"
   },
   "engines": {
-    "node": "16.x.x"
   },
   "typesync": {
     "ignoreDeps": [
